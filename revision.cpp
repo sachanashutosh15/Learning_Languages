@@ -398,6 +398,20 @@
 //		cout << food << "\n";
 //		cout << meal << "\n";
 //
-//	Memory Address
-//		& can also be used to create a reference variable. But it can also be used to
+//	Memory Address:
+//		& can be used to create a reference variable but it can also be used to
 //		get the memory address of a variable.
+//
+//		When a variable is created in C++, a memory address is assigned to the
+//		variable, and as we assign a value to the variable, it is stored in that memory
+//		address.
+//
+//		string food = "Pizza";
+//		cout << &food; // -> 0x6dfed4 (some memory address)
+//
+//	Pointers:
+//		A pointer is a variable that stores the memory addess as its value. A pointer
+//		variable points to a data type of the same type, and is created with the *
+//		operator. The address of the variable you're working with is assigned to the
+//		pointer.
+//
