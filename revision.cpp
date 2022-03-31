@@ -414,4 +414,221 @@
 //		variable points to a data type of the same type, and is created with the *
 //		operator. The address of the variable you're working with is assigned to the
 //		pointer.
+//		
+//		string food = "Pizza";
+//		string* ptr = &food; // A pointer variable, with the name ptr, that stores the
+//														address of food
+//		cout << food << "\n"; // -> Pizza
+//		cout << &food << "\n"; // -> 0x6dfed4
+//		cout << ptr << "\n"; // -> 0x6dfed4
+//		cout << *ptr << "\n"; // -> Pizza // It works as goto the address in ptr and 
+//																				 get the value		
+//		*ptr = "Hamburger"; // It works as goto the address in ptr and put the the 
+//													 value "Hamburger"
+//		cout << *ptr << "\n";
+//		cout << food << "\n"; // -> Hamburger // As the ptr points to the address of
+//																						food and we have placed "Hamburger"
+//																						at that address so we get Hamburger
+//---------------------------------------------------------------------------------
 //
+//
+//	Functions:
+//		A function is the block of code which only runs when it is called.
+//
+//		void myFunction () {
+//			// code to be executed
+//		}
+//
+//		- myFunction()----is name of function
+//		- void-----means that function doesn't have a return value.
+//
+//
+//		void myFunction() {
+//			cout << "I just got executed!";
+//		}
+//
+//		int main() {
+//			myFunction(); // call the function
+//			return 0;
+//		} // -> I just got executed!
+//
+//
+//
+//		Function Declaration:
+//			void myFunction();
+//		
+//			int main() {
+//				myFunction(); // call the function
+//				return 0;
+//			}
+//
+//		Function Definition:
+//			void myFunction() {
+//				cout << "I just got executed!";
+//			}
+//-------------------------------------
+//			void myFunction();
+//
+//			int main() {
+//				myFunction("Liam");
+//				myFunction("Jenny");
+//				myFunction("Anja");
+//			}
+//
+//			void myFunction(string fname) {
+//				cout << fname << " Refsnes\n";
+//			}
+//--------------------------------------
+//		Default parameter value:
+//
+//			void myFunction(string country = "Norway") {
+//				cout << country << "\n";
+//			}
+//
+//			int main() {
+//				myFunction("Sweden");
+//				myFunction("India");
+//				myFunction();
+//				myFunction("USA");
+//				return 0;
+//			}
+//
+//			// -> Sweden
+//			// -> India
+//			// -> Norway
+//			// -> USA
+//----------------------------------------
+//		Multiple Parameters
+//
+//			void myFunction(string fname, int age) {
+//				cout << fname << " Refsnes. " << age << " years old. \n";
+//			}
+//
+//			int main() {
+//				myFunction("Liam", 3);
+//				myFunction("Jenny", 14);
+//				myFunction("Anja", 30);
+//				return 0;
+//			}
+//			// -> Liam Refsnes. 3 years old.
+//			// -> Jenny Refsnes. 14 years old.
+//			// -> Anja Refsnes. 30 years old.
+//-------------------------------------------
+//		Return keyword
+//			int myFunction(int x) {
+//				return 5 + x;
+//			}
+//
+//			int main() {
+//				cout << myFunction(3);
+//				return 0;
+//			}
+//			// -> 8
+//----------------------------------------------------------------------------------
+//
+//
+//	Pass By Reference:
+//
+//		void swapNums(int &x, int &y) {
+//			int z = x;
+//			x = y;
+//			y = z;
+//		}
+//
+//		int main() {
+//			int firstNum = 10;
+//			int secondNum = 20;
+//
+//			cout << "Before swap: " << "\n";
+//			cout << firstNum << secondNum << "\n";
+//			swapNums(firstNum, secondNum);
+//
+//			cout << "After swap: " << "\n";
+//			cout << firstNum << secondNum << "\n";
+//		}
+//		
+//	Pass By Pointer:
+//
+//		void swapNums(int* x, int* y) {
+//			int temp = *x;
+//			*x = *y;
+//			*y = temp;
+//		}
+//
+//		int main() {
+//			int num1 = 10;
+//			int num2 = 20;
+//			cout << "Before swap: " << "\n";
+//			cout << num1 << " " << num2 << "\n";
+//			swapNums(&nums1, &nums2);
+//			cout << "After Swap: " << "\n";
+//			cout << num1 << " " << num2 << "\n";
+//		}
+//----------------------------------------------------------------------------
+//
+//
+//	Pass Arrays as Function Parameters
+//		
+//		void myFunction(int myNumbers[5]) {
+//			for (int i = 0; i < 5; i++) {
+//				cout << myNumbers[i] << "\n";
+//			}
+//		}
+//
+//		int main() {
+//			int myNumbers[5] = {10, 20, 30, 40, 50};
+//			myFunction(myNumbers);
+//			return 0;
+//		}
+//---------------------------------------------------------------------------
+//
+//
+//	Function Overloading:
+//		With function overloading, multiple functions can have the same name with
+//		different parameters.
+//
+//		int plusFuncInt(int x, int y) {
+//			return x + y;
+//		}
+//
+//		double plusFuncDouble(double x, double y) {
+//			return x + y;
+//		}
+//
+//		int main() {
+//			int myNum1 = plusFuncInt(8, 5);
+//			double myNum2 = plusFuncDouble(4.3, 6.26);
+//			cout << "Int: " << myNum1 << "\n";
+//			cout << "Double: " << myNum2;
+//			return 0;
+//		}
+//		
+//		Instead of defining two functions that should do the same things, it is better
+//		to overload one.
+//
+//		int plusFunc(int x, int y) {
+//			return x + y;
+//		}
+//
+//		double plusFunc(double x, double y) {
+//			return x + y;
+//		}
+//
+//		int main() {
+//			int myNum1 = plusFunc(8, 5);
+//			double myNum2 = plusFunc(4.3, 6.26);
+//			cout << "Int: " << myNum1 << "\n";
+//			cout << "Double: " << myNum2;
+//			return 0;
+//		}
+//--------------------------------------------------------------------------------
+//
+//
+//	Recursion:
+//		int sum(int k) {
+//			if (k > 0) {
+//				return k + sum(k - 1);
+//			} else {
+//				return 0;
+//			}
+//		}
