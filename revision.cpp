@@ -1,38 +1,38 @@
 // Learning C++
 // -------------
-// 
+//
 // #include <iostream>
 // using namespace std;
-// 
+//
 // int main () {
 // 	cout << "Hello, World!" << "\n";
 // 	return 0;
 // }
-// 
+//
 // #include <iostream> is a header file that lets us work with the input and output
 // objects, such as cout.
-// 
+//
 // using namespace std, means that we can use names for objects and variables from the
 // standard library.
-// 
+//
 // int main() {}, is called function, any code inside the curly brackets will get
 // executed.
-// 
+//
 // cout, is an object used together with the insertion operator (<<) to output/print,
 // text.
-// 
+//
 // return 0; ends the main function.
-// 
+//
 // if the line "using namespace std;" is not used we will have to use "cout" like
 // std::cout << "Hello, World!" << "\n";
-// 
+//
 // both \n and endl are use to break the lines, \n is the preferred way.
-// 
+//
 // single line comments using // and multiline comments start with slash star and end
 // with star slash.
 // ---------------------------------------------------------------------------------
 //
-// 
+//
 // variables
 //
 // int - stores integers without decimals
@@ -67,7 +67,7 @@
 //
 //
 // User Input
-// 
+//
 // cin is a predefined variable that reads data from the keyboard with extraction
 // operator (>>).
 //
@@ -129,7 +129,7 @@
 //										Logical or (||),
 //										Logical not (!)
 //
-// String concatenation: 
+// String concatenation:
 //				string firstName = "John";
 //				string lastName = "Doe";
 //				string fullName = firstName + " " + lastName;
@@ -156,7 +156,7 @@
 //
 //
 // UserInputStrings
-// 
+//
 // cin allows us to take a string as an input from the user, however cin considers a
 // space as terminating character which means it can only display a single word.
 //
@@ -227,7 +227,7 @@
 //		string result = (time < 18) ? "Good Day." : "Good evening.";
 //		cout << result; // -> Good Evening.
 //
-// 
+//
 //
 // Switch Statements: switch (expression) {
 //											case x:
@@ -248,7 +248,7 @@
 //-----------------------------------------------------------------------------------
 //
 //
-// Loops: 
+// Loops:
 //	While Loop:
 //		while (condition) {
 //			// code block to be executed
@@ -283,7 +283,7 @@
 //
 //		here cars is an array which will be used to store strings, and it can store 4
 //		strings.
-//		
+//
 //		string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
 //
 //		int myNum[3] = {10, 20, 37};
@@ -317,7 +317,7 @@
 //			20 is the size of array in bytes. To find the number of elements in the array
 //			int getArrayLength = sizeof(myNumbers) / sizeof(int);
 //			cout << getArrayLength; // -> 5
-//		
+//
 //		Multidimensional Arrays: just extension of 1-D array nothing special.
 //-----------------------------------------------------------------------------------
 //
@@ -390,7 +390,7 @@
 //
 //
 //	Creating References:
-//		A reference variable is a reference to an existing variable, and it is created 
+//		A reference variable is a reference to an existing variable, and it is created
 //		with the & operator.
 //
 //		string food = "Pizza";
@@ -414,16 +414,16 @@
 //		variable points to a data type of the same type, and is created with the *
 //		operator. The address of the variable you're working with is assigned to the
 //		pointer.
-//		
+//
 //		string food = "Pizza";
 //		string* ptr = &food; // A pointer variable, with the name ptr, that stores the
 //														address of food
 //		cout << food << "\n"; // -> Pizza
 //		cout << &food << "\n"; // -> 0x6dfed4
 //		cout << ptr << "\n"; // -> 0x6dfed4
-//		cout << *ptr << "\n"; // -> Pizza // It works as goto the address in ptr and 
-//																				 get the value		
-//		*ptr = "Hamburger"; // It works as goto the address in ptr and put the the 
+//		cout << *ptr << "\n"; // -> Pizza // It works as goto the address in ptr and
+//																				 get the value
+//		*ptr = "Hamburger"; // It works as goto the address in ptr and put the the
 //													 value "Hamburger"
 //		cout << *ptr << "\n";
 //		cout << food << "\n"; // -> Hamburger // As the ptr points to the address of
@@ -456,7 +456,7 @@
 //
 //		Function Declaration:
 //			void myFunction();
-//		
+//
 //			int main() {
 //				myFunction(); // call the function
 //				return 0;
@@ -546,7 +546,7 @@
 //			cout << "After swap: " << "\n";
 //			cout << firstNum << secondNum << "\n";
 //		}
-//		
+//
 //	Pass By Pointer:
 //
 //		void swapNums(int* x, int* y) {
@@ -568,7 +568,7 @@
 //
 //
 //	Pass Arrays as Function Parameters
-//		
+//
 //		void myFunction(int myNumbers[5]) {
 //			for (int i = 0; i < 5; i++) {
 //				cout << myNumbers[i] << "\n";
@@ -602,7 +602,7 @@
 //			cout << "Double: " << myNum2;
 //			return 0;
 //		}
-//		
+//
 //		Instead of defining two functions that should do the same things, it is better
 //		to overload one.
 //
@@ -632,3 +632,17 @@
 //				return 0;
 //			}
 //		}
+
+//  vector<int>, vector<string>, vector<vector<int>>,
+//  vector<int> vec = {1, 2, 3};
+//  vec.push_back(4);
+//  vec.pop_back();
+//  vec[0] = 2;
+
+//  set<int> mySet;
+//  mySet.insert(1);
+//  mySet.insert(2);
+//  mySet.erase();
+//  mySet.find(num);
+//  mySet.size();
+//  mySet.empty();
